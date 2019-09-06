@@ -9,7 +9,17 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-test('contains Alex Morgan', ()=> {
+test('contains soccer', ()=> {
   const { getByText } = render(<App />);
-  getByText(/alex morgan/i);
+  getByText(/soccer/i);
+})
+
+test('contains players', ()=> {
+  const { getByText } = render(<App />);
+  getByText(/players/i);
+})
+
+test('contains submit', ()=> {
+  const { getByText } = render(<App />);
+  getByText(/submit/i);
 })

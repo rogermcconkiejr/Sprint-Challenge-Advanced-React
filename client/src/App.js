@@ -22,6 +22,7 @@ class App extends React.Component {
   render () {
   return (
     <div className="App">
+      <h1 id="soccerTitle">Women Soccer Players</h1>
       <TitleForm />
       <div>
         {this.state.playerData.map(player=>{
