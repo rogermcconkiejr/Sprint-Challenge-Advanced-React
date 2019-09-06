@@ -3,6 +3,8 @@ import axios from "axios";
 import './App.css';
 
 import Card from './Card';
+import Counter from './Counter';
+import TitleForm from "./TitleForm";
 
 class App extends React.Component {
   state = {
@@ -20,10 +22,7 @@ class App extends React.Component {
   render () {
   return (
     <div className="App">
-      <div>
-      <h1>Soccer Data</h1>
-      </div>
-      
+      <TitleForm />
       <div>
         {this.state.playerData.map(player=>{
           return (
