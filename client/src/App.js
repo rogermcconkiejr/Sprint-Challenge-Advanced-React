@@ -3,6 +3,8 @@ import axios from "axios";
 import logo from './logo.svg';
 import './App.css';
 
+import Card from './Card';
+
 class App extends React.Component {
   state = {
     playerData: []
@@ -20,6 +22,11 @@ class App extends React.Component {
   return (
     <div className="App">
       <h1>Soccer Data</h1>
+      <Card 
+      id = {this.state.playerData.id}
+      playerName = {this.state.playerData.name}
+      playerCountry = {this.state.playerData.country}
+      />
     </div>
   );
 }
