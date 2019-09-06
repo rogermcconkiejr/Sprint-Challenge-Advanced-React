@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from "axios";
-import logo from './logo.svg';
 import './App.css';
 
 import Card from './Card';
@@ -21,12 +20,21 @@ class App extends React.Component {
   render () {
   return (
     <div className="App">
+      <div>
       <h1>Soccer Data</h1>
-      <Card 
-      id = {this.state.playerData.id}
-      playerName = {this.state.playerData.name}
-      playerCountry = {this.state.playerData.country}
-      />
+      </div>
+      
+      <div>
+        {this.state.playerData.map(player=>{
+          return (
+            <Card 
+            key = {player.id}
+            name = {player.name}
+            country = {player.country}
+            />
+          )
+        })}  
+      </div>
     </div>
   );
 }
